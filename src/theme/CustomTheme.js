@@ -46,8 +46,8 @@ const CustomTheme = extendTheme({
     },
   },
   fonts: {
-    heading: "lexend",
-    body: "lexend",
+    heading: "Lexend,open-sans",
+    body: "Lexend,open-sans",
   },
 });
 
