@@ -1,3 +1,8 @@
+html,
+body {
+  font-family: Lexend;
+}
+
 .isActive {
   padding: 6px 12px;
   background-color: "#fefcca";
