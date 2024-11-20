@@ -8,7 +8,7 @@ function Main() {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration
-      offset: 300, // Trigger animation when 200px in viewport
+      offset: 200, // Trigger animation when 200px in viewport
       easing: "ease-in-out",
       once: false, // Animation occurs only once
     });

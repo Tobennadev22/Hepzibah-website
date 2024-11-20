@@ -225,6 +225,8 @@ function Footer() {
               spacing={4}
               display={{ base: "block", md: "flex" }}
               fontWeight={400}
+              fontSize={["12px", "14px", "16px"]}
+              py={["10px", "0px", "0px"]}
             >
               <NavLink as={ReactRouterLink} to="/about">
                 About Us
@@ -239,7 +241,7 @@ function Footer() {
         <Spacer />
         <Box>
           <Flex align="center">
-            <Text>Socials</Text>
+            <Text fontSize={["12px", "14px", "16px"]}>Socials</Text>
             <Flex pl={4}>
               {socials.map((social, index) => (
                 <Box key={index} pl={4}>
@@ -256,7 +258,7 @@ function Footer() {
         </Box>
       </Flex>
       <Divider pt="24px" />
-      <Text textAlign="center" pt="24px">
+      <Text textAlign="center" pt="24px" fontSize={["12px", "14px", "16px"]}>
         All rights reserved. Hepzibah Care 2024
       </Text>
     </Box>

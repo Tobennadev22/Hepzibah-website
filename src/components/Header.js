@@ -114,9 +114,10 @@ function Header() {
               <Box
                 px={4}
                 py={1}
-                bgColor="lemonColor.50"
-                color="lemonColor.800"
-                rounded={10}
+                // bgColor="lemonColor.50"
+                color="lemonColor.200"
+                // rounded={10}
+                textAlign="center"
               >
                 We’ve assisted over 1000 persons in 2years
               </Box>

@@ -118,7 +118,7 @@ function CardDescription() {
           <Text fontSize="24px" fontWeight={400} py="12px">
             Our Vision
           </Text>
-          <Text>
+          <Text fontWeight={300}>
             Hepzibah Care is a not-for-profit organisation committed to
             implementing a person-centred approach, by way of, advocacy to
             participants and their caregivers empowering them to achieve their
@@ -137,10 +137,10 @@ function CardDescription() {
           marginRight={[0, 0, 5]}
           mb={["24px", "0px", "0px"]}
         >
-          <Text fontSize="24px" fontWeight={600} py="12px">
+          <Text fontSize="24px" fontWeight={400} py="12px">
             Our Mission
           </Text>
-          <Text>
+          <Text fontWeight={300}>
             To provide unique and friendly support to persons living with
             disability and their families, and inspire our service users to
             delight in themselves by finding a sense of purpose and identity in
@@ -148,7 +148,7 @@ function CardDescription() {
           </Text>
         </Box>
         <Box
-          bgColor="specialColor.400"
+          bgColor="gray.50"
           w={["100%", "100%", "407px"]}
           h="473px"
           p={4}
@@ -156,10 +156,10 @@ function CardDescription() {
           borderRadius={10}
           mb={["24px", "0px", "0px"]}
         >
-          <Text fontSize="24px" fontWeight={600} py="12px">
+          <Text fontSize="24px" fontWeight={400} py="12px">
             Our Approach
           </Text>
-          <Text>
+          <Text fontWeight={300}>
             At Hepzibah Care, our approach is rooted in the Biopsychosocial
             model of care, ensuring that we address the physical, psychological,
             and social needs of every client. This holistic framework allows us
@@ -200,7 +200,7 @@ function CoreValue() {
         <Box
           bgColor="specialColor.400"
           width={["100%", "100%", "630px"]}
-          height={["100%", "100%", "145px"]}
+          height={"100%"}
           p={6}
           borderRadius={10}
           marginRight={5}
@@ -217,7 +217,7 @@ function CoreValue() {
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
-            fontWeight={[600, 600, 800]}
+            fontWeight={[400]}
             pb={["8px"]}
           >
             Empathy & Collaboration
@@ -230,7 +230,7 @@ function CoreValue() {
         <Box
           bgColor="#ffffff"
           width={["100%", "100%", "630px"]}
-          height={["100%", "100%", "145px"]}
+          height={"100%"}
           p={6}
           borderRadius={10}
           boxShadow="2xl"
@@ -245,7 +245,7 @@ function CoreValue() {
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
-            fontWeight={[600, 600, 800]}
+            fontWeight={[400]}
             pb={["8px"]}
           >
             Diversity
@@ -263,7 +263,7 @@ function CoreValue() {
         <Box
           bgColor="#ffffff"
           width={["100%", "100%", "630px"]}
-          height={["100%", "100%", "145px"]}
+          height={"100%"}
           p={6}
           borderRadius={10}
           boxShadow="2xl"
@@ -280,7 +280,7 @@ function CoreValue() {
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
-            fontWeight={[600, 600, 800]}
+            fontWeight={[400]}
             pb={["8px"]}
           >
             Respect
@@ -293,7 +293,7 @@ function CoreValue() {
         <Box
           bgColor="#ffffff"
           width={["100%", "100%", "630px"]}
-          height={["100%", "100%", "145px"]}
+          height={"100%"}
           p={6}
           borderRadius={10}
           boxShadow="2xl"
@@ -308,7 +308,7 @@ function CoreValue() {
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
-            fontWeight={[600, 600, 800]}
+            fontWeight={[400]}
             pb={["8px"]}
           >
             Quality
@@ -327,7 +327,7 @@ function CoreValue() {
         <Box
           bgColor="#ffffff"
           width={["100%", "100%", "630px"]}
-          height={["100%", "100%", "145px"]}
+          height={"100%"}
           p={6}
           borderRadius={10}
           boxShadow="2xl"
@@ -344,7 +344,7 @@ function CoreValue() {
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
-            fontWeight={[600, 600, 800]}
+            fontWeight={[400]}
             pb={["8px"]}
           >
             Integrity & Accountability
@@ -357,7 +357,7 @@ function CoreValue() {
         <Box
           bgColor="#ffffff"
           width={["100%", "100%", "630px"]}
-          height={["100%", "100%", "145px"]}
+          height={"100%"}
           p={6}
           borderRadius={10}
           boxShadow={"2xl"}
@@ -372,7 +372,7 @@ function CoreValue() {
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
-            fontWeight={[600, 600, 800]}
+            fontWeight={[400]}
             pb={["8px"]}
           >
             Advocacy
@@ -391,7 +391,7 @@ function CoreValue() {
         <Box
           bgColor="#ffffff"
           width={["100%", "100%", "630px"]}
-          height={["100%", "100%", "145px"]}
+          height={"100%"}
           p={6}
           borderRadius={10}
           boxShadow="2xl"
@@ -407,7 +407,7 @@ function CoreValue() {
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
-            fontWeight={[600, 600, 800]}
+            fontWeight={[400]}
             pb={["8px"]}
           >
             Empowerment
