@@ -84,13 +84,13 @@ function ContactInput() {
       <Input
         placeholder="Full Name"
         type="text"
-        w={["300px", "300px", "400px"]}
+        w={["100%", "300px", "400px"]}
       />
-      <Input placeholder="Email" type="email" w={["300px", "300px", "400px"]} />
+      <Input placeholder="Email" type="email" w={["100%", "300px", "400px"]} />
       <Textarea
         placeholder="Message"
         type="text"
-        w={["300px", "300px", "400px"]}
+        w={["100%", "300px", "400px"]}
         h={["136px"]}
       />
       <Box mt="24px">
