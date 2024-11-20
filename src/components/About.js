@@ -4,7 +4,7 @@ import myImage from "../assets/AboutImage.png";
 // Main Header component
 function About() {
   return (
-    <Box as="section" pt="48px">
+    <Box as="section">
       <HeaderContent />
       <CardDescription />
       <CoreValue />
@@ -18,6 +18,7 @@ function HeaderContent() {
       direction={["column", "column", "row"]}
       spacing="20px"
       px={[2, 5, 10]}
+      bg="bgCustomA.600"
     >
       {/* Main content box with background image */}
       <Box
@@ -40,7 +41,7 @@ function HeaderContent() {
             fontSize={["2xl", "3xl", "54px"]}
             pb={[2, 5, 10]}
             width={["100%"]}
-            // color="gray.600"
+            color="gray.100"
           >
             About Us
           </Heading>
@@ -49,7 +50,7 @@ function HeaderContent() {
             fontSize={["sm", "md", "md"]}
             w={["100%", "100%", 600]}
             pt="2"
-            color={["gray.500"]}
+            color="gray.200"
             textAlign={["center", "center", "left"]}
             pb="32px"
           >
@@ -81,8 +82,6 @@ function ImageSection() {
       px={["16px", "16px"]}
       w={["100%", "100%", 800]}
       display={["block", "none", "block"]}
-      // bg="brandblue.200"
-
       // borderRadius={20}
       backgroundImage={`url(${myImage})`}
       backgroundSize="cover"
@@ -114,7 +113,7 @@ function CardDescription() {
           marginRight={[0, 0, 5]}
           mb={["24px", "0px", "0px"]}
         >
-          <Text fontSize="24px" fontWeight={600} py="12px">
+          <Text fontSize="24px" fontWeight={400} py="12px">
             Our Vision
           </Text>
           <Text>

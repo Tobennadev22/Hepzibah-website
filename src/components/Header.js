@@ -16,11 +16,12 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <Box
-      mb={["16px", "16px", "28px"]}
+      // mb={["16px", "16px", "28px"]}
       as="section"
       px={[2, 5, 10]}
       pt="48px"
       pb={["10px", "40px", "140px"]}
+      background="bgCustom.600"
     >
       <Flex direction={["column", "column", "row"]} spacing="20px">
         {/* Main content box with background image */}
@@ -46,24 +47,24 @@ function Header() {
               fontSize={["2xl", "3xl", "54px"]}
               pb={[5, 5, 10]}
               width={["100%"]}
-              // color="gray.600"
+              color="gray.100"
             >
               <span className="singleHeadingTextColor">Empowering</span>{" "}
               Individuals
-              <br></br> with Disabilities to <br></br> Achieve Independence,
+              <br></br> with Disability to <br></br> Achieve Independence,
               <br></br> Dignity, and a Fulfilling<br></br>
               Life
             </Heading>
             <Text
-              fontWeight="medium"
+              fontWeight={300}
               fontSize={["sm", "md", "md"]}
               w={["100%", "100%", 600]}
               pt="2"
-              color={["gray.500"]}
+              color={["gray.200"]}
               textAlign={["center", "center", "left"]}
             >
               We delight in offering Person-Centered services to individuals
-              with disabilities and their caregivers through a Biopsychosocial
+              with disability and their caregivers through a Biopsychosocial
               approach, enabling our service users to flourish as they develop
               living skills and rediscover their sense of purpose and connection
               in society
@@ -89,16 +90,24 @@ function Header() {
           <Box pt="64px">
             <Flex
               direction={["column", "column", "row"]}
-              justifyContent={"center"}
-              alignItems={"center"}
+              justifyContent={"start"}
+              alignItems={"start"}
             >
               <img
                 src={faces}
                 alt="faces"
                 width={["170px"]}
-                marginLeft="14px"
+                marginRight="14px"
               ></img>
-              <p>We’ve assisted over 1000 persons in 2years</p>
+              <Box
+                px={4}
+                py={1}
+                bgColor="lemonColor.50"
+                color="lemonColor.800"
+                rounded={10}
+              >
+                We’ve assisted over 1000 persons in 2years
+              </Box>
             </Flex>
           </Box>
         </Box>

@@ -44,10 +44,18 @@ const CustomTheme = extendTheme({
     specialColor: {
       400: "#F3FFD3",
     },
+
+    bgCustom: {
+      600: "#132935",
+    },
+
+    bgCustomA: {
+      600: "#1C2010",
+    },
   },
   fonts: {
-    heading: "Lexend,open-sans",
-    body: "Lexend,open-sans",
+    heading: "Lexend, sans-serif",
+    body: "Lexend, sans-serif",
   },
 });
 

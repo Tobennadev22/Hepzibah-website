@@ -44,10 +44,10 @@ function Content() {
           Why Choose<br></br> Hepzibah Care
         </Heading>
         <Text
-          fontWeight="medium"
+          fontWeight={400}
           fontSize={["sm", "md", "md"]}
           w={["100%", "100%", 600]}
-          color={["gray.500"]}
+          color={["gray.700"]}
           textAlign={["center", "center", "left"]}
         >
           At Hepzibah Care, we provide personalized, compassionate support that
@@ -68,10 +68,10 @@ function Content() {
             pb={["10px", "0px", "0px"]}
             boxShadow="xl"
           >
-            <Text fontSize="18px" fontWeight="Bold" py="12px">
+            <Text fontSize="18px" fontWeight="semiBold" py="12px">
               Holistic and Personalized Care
             </Text>
-            <Text fontSize="14px">
+            <Text fontSize="14px" color={["gray.700"]}>
               We understand that each client’s journey is unique, and our
               approach is tailored to meet the specific needs of every
               individual.
@@ -86,10 +86,10 @@ function Content() {
             mb={["10px", "0px", "0px"]}
             boxShadow="xl"
           >
-            <Text fontSize="18px" fontWeight="Bold" py="12px">
+            <Text fontSize="18px" fontWeight="semiBold" py="12px">
               Experienced and Compassionate Team
             </Text>
-            <Text fontSize="14px">
+            <Text fontSize="14px" color={["gray.700"]}>
               Our team includes experienced Social Workers, Care Coordinators,
               and Support Workers, all of whom are dedicated to making a
               difference in the lives of our clients.
@@ -107,10 +107,10 @@ function Content() {
             p={4}
             boxShadow="2xl"
           >
-            <Text fontSize="18px" fontWeight="Bold" py="12px">
+            <Text fontSize="18px" fontWeight="semiBold" py="12px">
               Client-Centered Focus
             </Text>
-            <Text fontSize="14px">
+            <Text fontSize="14px" color={["gray.700"]}>
               We place the client at the heart of everything we do, ensuring
               their voice is central to every decision, and their goals are at
               the forefront of our services.
@@ -124,10 +124,10 @@ function Content() {
             p={4}
             boxShadow="2xl"
           >
-            <Text fontSize="18px" fontWeight="Bold" py="12px">
+            <Text fontSize="18px" fontWeight="semiBold" py="12px">
               Community Connection
             </Text>
-            <Text fontSize="14px">
+            <Text fontSize="14px" color={["gray.700"]}>
               We work closely with local organizations and community groups to
               ensure our clients are connected to broader support systems,
               enriching their experience and promoting social inclusion.

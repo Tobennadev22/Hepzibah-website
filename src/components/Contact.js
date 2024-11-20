@@ -27,6 +27,7 @@ function Contact() {
           w={["100%", "100%", "800px"]}
         >
           <Text fontSize={"18px"}>Get In Touch</Text>
+
           <Heading
             fontWeight={["light", "medium", "light"]}
             fontSize={["3xl", "3xl", "54px"]}
@@ -36,10 +37,10 @@ function Contact() {
             We do love to hear<br></br> form you.
           </Heading>
           <Text
-            fontWeight="medium"
+            fontWeight={400}
             fontSize={["sm", "md", "md"]}
             pt="2"
-            color={["gray.500"]}
+            color={["gray.700"]}
             // textAlign={["center", "center", "left"]}
           >
             If you or a loved one are seeking Disability, or Mental Health Care
