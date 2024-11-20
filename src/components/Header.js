@@ -8,12 +8,22 @@ import {
 } from "@chakra-ui/react";
 // import myImage from "../assets/bg-toby.png";
 // import { Wave } from "../icons/hands.png";
+import { useEffect } from "react";
 import faces from "../assets/faces.png";
 import myImage from "../assets/thought.png";
 import { Link } from "react-router-dom";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 // Main Header component
 function Header() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration
+      easing: "ease-in",
+      once: false, // Animation occurs only once
+    });
+  }, []);
   return (
     <Box
       // mb={["16px", "16px", "28px"]}
@@ -22,6 +32,8 @@ function Header() {
       pt="48px"
       pb={["10px", "40px", "140px"]}
       background="bgCustom.600"
+      py={["60px"]}
+      data-aos="fade-up" // AOS animation
     >
       <Flex direction={["column", "column", "row"]} spacing="20px">
         {/* Main content box with background image */}
@@ -90,8 +102,8 @@ function Header() {
           <Box pt="64px">
             <Flex
               direction={["column", "column", "row"]}
-              justifyContent={"start"}
-              alignItems={"start"}
+              justifyContent={["center", "center", "start"]}
+              alignItems={["center", "center", "start"]}
             >
               <img
                 src={faces}

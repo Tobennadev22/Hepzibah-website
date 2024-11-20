@@ -50,7 +50,7 @@ const CustomTheme = extendTheme({
     },
 
     bgCustomA: {
-      600: "#1C2010",
+      600: "#f1f4f8",
     },
   },
   fonts: {

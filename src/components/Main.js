@@ -1,7 +1,18 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import disableimg from "../assets/img-section.png";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { useEffect } from "react";
 
 function Main() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      offset: 300, // Trigger animation when 200px in viewport
+      easing: "ease-in-out",
+      once: false, // Animation occurs only once
+    });
+  }, []);
   return (
     <Box
       mb={["16px", "16px", "28px"]}
@@ -12,6 +23,7 @@ function Main() {
       w={["100%"]}
       h={["1400px", 600, 1000]}
       bg="#F5FCFF"
+      data-aos="fade-right" // AOS animation
     >
       <Flex
         direction={["column", "column", "row"]}
@@ -57,7 +69,10 @@ function Content() {
           on
         </Text>
         <Box mt="48px"></Box>
-        <Flex pb={"10px"} direction={["column", "column", "row"]}>
+        <Flex
+          pb={["0px", "10px", "10px"]}
+          direction={["column", "column", "row"]}
+        >
           <Box
             bgColor="specialColor.400"
             width={["100%", "100%", "305px"]}
@@ -66,6 +81,7 @@ function Content() {
             borderRadius={10}
             p={4}
             pb={["10px", "0px", "0px"]}
+            mb={["10px", "0px", "0px"]}
             boxShadow="xl"
           >
             <Text fontSize="18px" fontWeight="semiBold" py="12px">

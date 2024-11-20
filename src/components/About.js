@@ -19,6 +19,7 @@ function HeaderContent() {
       spacing="20px"
       px={[2, 5, 10]}
       bg="bgCustomA.600"
+      py={["40px"]}
     >
       {/* Main content box with background image */}
       <Box
@@ -34,6 +35,7 @@ function HeaderContent() {
         <Box
           textAlign={["center", "center", "left"]}
           px={["0px", "16px", "24px"]}
+
           // pt="48px"
         >
           <Heading
@@ -41,16 +43,16 @@ function HeaderContent() {
             fontSize={["2xl", "3xl", "54px"]}
             pb={[2, 5, 10]}
             width={["100%"]}
-            color="gray.100"
+            color="gray.700"
           >
             About Us
           </Heading>
           <Text
-            fontWeight="medium"
+            fontWeight={400}
             fontSize={["sm", "md", "md"]}
             w={["100%", "100%", 600]}
             pt="2"
-            color="gray.200"
+            color="gray.600"
             textAlign={["center", "center", "left"]}
             pb="32px"
           >

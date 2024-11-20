@@ -10,9 +10,20 @@ import {
   useColorModeValue,
   Textarea,
 } from "@chakra-ui/react";
+import { useEffect } from "react";
 import ContactImage from "../assets/Frame 31.png";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 function Contact() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration
+      offset: 200,
+      easing: "ease-in-out",
+      once: false, // Animation occurs only once
+    });
+  }, []);
   return (
     <Box
       mb={["16px", "16px", "28px"]}
@@ -20,6 +31,7 @@ function Contact() {
       px={[2, 5, "100px"]}
       pt={["80px", "32px", "48px"]}
       pb={["20px", "40px", "140px"]}
+      data-aos="fade-up" // AOS animation
     >
       <Flex>
         <Box
