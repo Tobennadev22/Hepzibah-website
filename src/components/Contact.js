@@ -9,6 +9,7 @@ import {
   Link,
   useColorModeValue,
   Textarea,
+  FormControl,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
 import ContactImage from "../assets/Frame 31.png";
@@ -81,34 +82,50 @@ function Contact() {
 function ContactInput() {
   return (
     <Stack direction={["column"]}>
-      <Input
-        placeholder="Full Name"
-        type="text"
-        w={["100%", "300px", "400px"]}
-      />
-      <Input placeholder="Email" type="email" w={["100%", "300px", "400px"]} />
-      <Textarea
-        placeholder="Message"
-        type="text"
-        w={["100%", "300px", "400px"]}
-        h={["136px"]}
-      />
-      <Box mt="24px">
-        <Link>
-          <Button
-            href={"#"}
-            _hover={{
-              bg: useColorModeValue("lemonColor.800", "#ffffff"),
-              color: "gray.50",
-            }}
-            bgColor="lemonColor.600"
-            color="#ffffff"
-            w={["158px"]}
-            h={["48px"]}
-          >
-            Submit
-          </Button>
-        </Link>
+      <Box as="form" action="https://formspree.io/f/xvgoqbrd" method="POST">
+        <FormControl mb={4}>
+          <Input
+            placeholder="Full Name"
+            type="text"
+            name="name"
+            w={["100%", "300px", "400px"]}
+          />
+        </FormControl>
+        <FormControl mb={4}>
+          <Input
+            placeholder="Email"
+            type="email"
+            name="email"
+            w={["100%", "300px", "400px"]}
+          />
+        </FormControl>
+        <FormControl mb={4}>
+          <Textarea
+            placeholder="Message"
+            type="text"
+            name="message"
+            w={["100%", "300px", "400px"]}
+            h={["136px"]}
+          />
+        </FormControl>
+        <Box mt="24px">
+          <Link>
+            <Button
+              type="submit"
+              // href={"#"}
+              _hover={{
+                bg: useColorModeValue("lemonColor.800", "#ffffff"),
+                color: "gray.50",
+              }}
+              bgColor="lemonColor.600"
+              color="#ffffff"
+              w={["158px"]}
+              h={["48px"]}
+            >
+              Submit
+            </Button>
+          </Link>
+        </Box>
       </Box>
     </Stack>
   );
