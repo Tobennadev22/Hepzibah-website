@@ -166,7 +166,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { Link as ChakraLink } from "@chakra-ui/react";
-import { Link as ReactRouterLink } from "react-router-dom";
+// import { Link as ReactRouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import Logo from "../assets/tobymileslogo.png";
 import facebook from "../icons/facebook.png";
@@ -228,13 +228,11 @@ function Footer() {
               fontSize={["12px", "14px", "16px"]}
               py={["10px", "0px", "0px"]}
             >
-              <NavLink as={ReactRouterLink} to="/about">
-                About Us
-              </NavLink>
+              <NavLink to="/about">About Us</NavLink>
               <NavLink to="project-section" isScrollLink>
                 Services
               </NavLink>
-              <NavLink href="#">Contact Us</NavLink>
+              <NavLink to="/contact">Contact Us</NavLink>
             </HStack>
           </HStack>
         </Box>

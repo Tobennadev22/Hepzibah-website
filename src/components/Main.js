@@ -15,7 +15,7 @@ function Main() {
   }, []);
   return (
     <Box
-      mb={["16px", "16px", "28px"]}
+      // mb={["16px", "16px", "28px"]}
       as="section"
       px={[2, 5, "100px"]}
       pt={["40px", "80px", "80px"]}
