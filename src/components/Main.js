@@ -7,7 +7,7 @@ import { useEffect } from "react";
 function Main() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
+      duration: 1200, // Animation duration
       offset: 200, // Trigger animation when 200px in viewport
       easing: "ease-in-out",
       once: false, // Animation occurs only once
@@ -23,7 +23,7 @@ function Main() {
       w={["100%"]}
       h={["1400px", 600, 1000]}
       bg="#F5FCFF"
-      data-aos="fade-right" // AOS animation
+      data-aos="fade-up" // AOS animation
     >
       <Flex
         direction={["column", "column", "row"]}
