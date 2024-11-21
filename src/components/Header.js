@@ -6,14 +6,22 @@ import {
   useColorModeValue,
   Flex,
 } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ChakraLink } from "@chakra-ui/react";
 // import myImage from "../assets/bg-toby.png";
 // import { Wave } from "../icons/hands.png";
 import { useEffect } from "react";
 import faces from "../assets/faces.png";
 import myImage from "../assets/thought.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 import AOS from "aos";
+
+const NavLink = ({ children, to = "#", onClick }) => (
+  <ChakraLink as={ReactRouterLink} to={to} onClick={onClick}>
+    {children}
+  </ChakraLink>
+);
 
 // Main Header component
 function Header() {
@@ -82,21 +90,26 @@ function Header() {
               in society
             </Text>
             <Box mt="48px">
-              <Link>
-                <Button
-                  href={"#"}
-                  _hover={{
-                    bg: useColorModeValue("lemonColor.800", "#ffffff"),
-                    color: "gray.50",
-                  }}
-                  bgColor="lemonColor.600"
-                  color="#ffffff"
-                  w={["158px"]}
-                  h={["48px"]}
-                >
-                  Get In Touch
-                </Button>
-              </Link>
+              <ChakraLink>
+                <NavLink>
+                  <Button
+                    // href={"#"}
+                    to="/contact"
+                    as={ReactRouterLink}
+                    _hover={{
+                      bg: useColorModeValue("lemonColor.800", "#ffffff"),
+                      color: "gray.50",
+                      textDecoration: "none",
+                    }}
+                    bgColor="lemonColor.600"
+                    color="#ffffff"
+                    w={["158px"]}
+                    h={["48px"]}
+                  >
+                    Get In Touch
+                  </Button>
+                </NavLink>
+              </ChakraLink>
             </Box>
           </Box>
           <Box pt="64px">
