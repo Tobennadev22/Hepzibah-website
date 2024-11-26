@@ -1,5 +1,24 @@
-import { Box, Text, Heading, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Heading,
+  Flex,
+  Button,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import myImage from "../assets/AboutImage.png";
+// import visionIcon from "../icons/healthcare2.png";
+// import missionIcon from "../icons/care.png";
+// import approachIcon from "../icons/emotional-health.png";
+
+import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ChakraLink } from "@chakra-ui/react";
+
+const NavLink = ({ children, to = "#", onClick }) => (
+  <ChakraLink as={ReactRouterLink} to={to} onClick={onClick}>
+    {children}
+  </ChakraLink>
+);
 
 // Main Header component
 function About() {
@@ -48,7 +67,7 @@ function HeaderContent() {
             About Us
           </Heading>
           <Text
-            fontWeight={400}
+            fontWeight={300}
             fontSize={["sm", "md", "md"]}
             w={["100%", "100%", 600]}
             pt="2"
@@ -67,6 +86,29 @@ function HeaderContent() {
             participants in society, develop autonomy and live fulfilling lives
             with dignity and independence
           </Text>
+
+          <Box mt="32px">
+            <NavLink>
+              <ChakraLink>
+                <Button
+                  // href={"#"}
+                  to="/contact"
+                  as={ReactRouterLink}
+                  _hover={{
+                    bg: useColorModeValue("lemonColor.800", "#ffffff"),
+                    color: "gray.50",
+                    textDecoration: "none",
+                  }}
+                  bgColor="lemonColor.600"
+                  color="#ffffff"
+                  w={["158px"]}
+                  h={["48px"]}
+                >
+                  Get In Touch
+                </Button>
+              </ChakraLink>
+            </NavLink>
+          </Box>
         </Box>
       </Box>
       {/* Placeholder for additional content */}
@@ -115,6 +157,7 @@ function CardDescription() {
           marginRight={[0, 0, 5]}
           mb={["24px", "0px", "0px"]}
         >
+          {/* <img src={visionIcon} width={["64px"]} alt="visionIcon" /> */}
           <Text fontSize="24px" fontWeight={400} py="12px">
             Our Vision
           </Text>
@@ -137,6 +180,9 @@ function CardDescription() {
           marginRight={[0, 0, 5]}
           mb={["24px", "0px", "0px"]}
         >
+          {/* <Box mx="auto">
+            <img src={missionIcon} width={["64px"]} alt="missionIcon" />
+          </Box> */}
           <Text fontSize="24px" fontWeight={400} py="12px">
             Our Mission
           </Text>
@@ -156,6 +202,7 @@ function CardDescription() {
           borderRadius={10}
           mb={["24px", "0px", "0px"]}
         >
+          {/* <img src={approachIcon} width={["64px"]} alt="approchicon" /> */}
           <Text fontSize="24px" fontWeight={400} py="12px">
             Our Approach
           </Text>
@@ -180,7 +227,7 @@ function CoreValue() {
       bgColor="#F5FCFF"
       w="100%"
       px={[1, 5, "250px"]}
-      p={2}
+      py={4}
       textAlign={["center", "left", "left"]}
     >
       <Box>
@@ -222,7 +269,7 @@ function CoreValue() {
           >
             Empathy & Collaboration
           </Text>
-          <Text fontSize={["14px", "16px", "16px"]}>
+          <Text fontSize={["14px", "16px", "16px"]} fontWeight={400}>
             We listen to our clients, understand their needs, and work closely
             with them and their caregivers to achieve positive outcomes.
           </Text>
@@ -250,7 +297,7 @@ function CoreValue() {
           >
             Diversity
           </Text>
-          <Text fontSize={["14px", "16px", "16px"]}>
+          <Text fontSize={["14px", "16px", "16px"]} fontWeight={400}>
             Our services are inclusive and accessible to all, regardless of
             background, culture, or ability, ensuring no one is left behind.
           </Text>
@@ -285,7 +332,7 @@ function CoreValue() {
           >
             Respect
           </Text>
-          <Text fontSize={["14px", "16px", "16px"]}>
+          <Text fontSize={["14px", "16px", "16px"]} fontWeight={400}>
             We treat everyone with dignity and honour, recognising and valuing
             their individuality and rights
           </Text>
@@ -313,7 +360,7 @@ function CoreValue() {
           >
             Quality
           </Text>
-          <Text fontSize={["14px", "16px", "16px"]}>
+          <Text fontSize={["14px", "16px", "16px"]} fontWeight={400}>
             We are committed to delivering high-quality services and
             continuously improving our programs to meet the changing needs of
             our clients.
@@ -349,7 +396,7 @@ function CoreValue() {
           >
             Integrity & Accountability
           </Text>
-          <Text fontSize={["14px", "16px", "16px"]}>
+          <Text fontSize={["14px", "16px", "16px"]} fontWeight={400}>
             We uphold transparency and responsibility in all our actions,
             ensuring our services are delivered honestly and efficiently.
           </Text>
@@ -377,7 +424,7 @@ function CoreValue() {
           >
             Advocacy
           </Text>
-          <Text fontSize={["14px", "16px", "16px"]}>
+          <Text fontSize={["14px", "16px", "16px"]} fontWeight={400}>
             We advocate for the rights of our clients, ensuring their voices are
             heard and their needs are met within the broader community and care
             systems.
@@ -412,7 +459,7 @@ function CoreValue() {
           >
             Empowerment
           </Text>
-          <Text fontSize={["14px", "16px", "16px"]}>
+          <Text fontSize={["14px", "16px", "16px"]} fontWeight={400}>
             We encourage individuals to take control of their lives, supporting
             them to make informed decisions and achieve personal growth.
           </Text>

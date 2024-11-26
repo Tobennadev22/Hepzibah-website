@@ -1,6 +1,23 @@
-import { Box, Text, Flex, Heading, Divider } from "@chakra-ui/react";
+import {
+  Box,
+  Text,
+  Flex,
+  Heading,
+  Divider,
+  Button,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import myImage from "../assets/holdinghands.png";
 import transportSection from "../assets/Transportservice.png";
+
+import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ChakraLink } from "@chakra-ui/react";
+
+const NavLink = ({ children, to = "#", onClick }) => (
+  <ChakraLink as={ReactRouterLink} to={to} onClick={onClick}>
+    {children}
+  </ChakraLink>
+);
 
 // Array of services
 const ServiceDescription = [
@@ -160,11 +177,11 @@ function HeaderContent() {
               Our Support Service
             </Heading>
             <Text
-              fontWeight="medium"
+              fontWeight={300}
               fontSize={["sm", "md", "md"]}
               w={["100%", "100%", 600]}
               // pt="2"
-              color={["gray.500"]}
+              color="gray.600"
               textAlign={["center", "center", "left"]}
             >
               Hepzibah Care offers a comprehensive range of support services
@@ -173,6 +190,28 @@ function HeaderContent() {
               enhance independence and inclusion for individuals living with
               disabilities. Services include:
             </Text>
+            <Box mt="48px">
+              <NavLink>
+                <ChakraLink>
+                  <Button
+                    // href={"#"}
+                    to="/contact"
+                    as={ReactRouterLink}
+                    _hover={{
+                      bg: useColorModeValue("lemonColor.800", "#ffffff"),
+                      color: "gray.50",
+                      textDecoration: "none",
+                    }}
+                    bgColor="lemonColor.600"
+                    color="#ffffff"
+                    w={["158px"]}
+                    h={["48px"]}
+                  >
+                    Get In Touch
+                  </Button>
+                </ChakraLink>
+              </NavLink>
+            </Box>
           </Box>
         </Box>
 
@@ -218,7 +257,7 @@ function ServiceContent({ handleServiceContent }) {
             marginRight={index % 3 === 2 ? 0 : ["0px", "0px", "80px"]}
             mb={["32px", "32px", "48px"]}
           >
-            <Heading fontSize="18px" fontWeight={600} pb="14px">
+            <Heading fontSize="18px" fontWeight="semiBold" pb="14px">
               {service.title}
             </Heading>
             <Text color="gray.500">{service.description}</Text>
@@ -269,7 +308,7 @@ function ReferralContent() {
               mb="10px"
               mx={["0px", "0px", "10px"]}
             >
-              <Text fontSize="18px" fontWeight="bold" py="12px">
+              <Text fontSize="18px" fontWeight="semiBold" py="12px">
                 {service.title}
               </Text>
               <Text fontSize="14px">{service.description}</Text>
@@ -336,7 +375,7 @@ function TransportService() {
                   mb="10px"
                   mx={["0px", "0px", "10px"]}
                 >
-                  <Text fontSize="18px" fontWeight="bold" pb="5px">
+                  <Text fontSize="18px" fontWeight="semiBold" pb="5px">
                     {service.title}
                   </Text>
                   <Text fontSize="14px" color="gray.700" fontWeight={400}>
