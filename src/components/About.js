@@ -87,7 +87,7 @@ function HeaderContent() {
             with dignity and independence
           </Text>
 
-          <Box mt="32px">
+          <Box my="32px">
             <NavLink>
               <ChakraLink>
                 <Button

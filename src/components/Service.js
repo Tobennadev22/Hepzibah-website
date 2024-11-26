@@ -190,7 +190,7 @@ function HeaderContent() {
               enhance independence and inclusion for individuals living with
               disabilities. Services include:
             </Text>
-            <Box mt="48px">
+            <Box mt={["10px", "32", "48px"]}>
               <NavLink>
                 <ChakraLink>
                   <Button
@@ -227,8 +227,10 @@ function ImageSection() {
   return (
     <Box
       h={[300, 400, 600]}
-      pt={["32px", "32px", "54px"]}
+      pt={["32px", "48px", "54px"]}
       px={["16px", "16px"]}
+      // mb={["24px", "0px", "0px"]}
+      my={["32px", "0px", "0px"]}
       w={["100%", "100%", 800]}
       display={["block", "none", "block"]}
       // bg="brandblue.200"
