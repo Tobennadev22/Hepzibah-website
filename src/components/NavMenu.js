@@ -29,7 +29,7 @@ const NavLink = ({ children, to = "#", onClick }) => (
     rounded="md"
     _hover={{
       textDecoration: "none",
-      bg: useColorModeValue("lemonColor.50", "gray.900"),
+      bg: useColorModeValue("lemonColor.200", "#ffffff"),
     }}
     _activeLink={{ color: "teal.500", fontWeight: "bold" }}
     onClick={onClick}
