@@ -6,11 +6,13 @@ import NavMenu from "./components/NavMenu";
 import Services from "./pages/Services";
 import { Box } from "@chakra-ui/react";
 import ContactUs from "./pages/ContactUs";
+import NavbarContact from "./components/NavbarContact";
 
 function App() {
   return (
     <Box>
       <Router>
+        <NavbarContact />
         <NavMenu />
         <Routes>
           <Route path="/" element={<Home />}></Route>

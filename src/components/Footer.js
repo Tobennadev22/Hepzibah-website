@@ -1,7 +1,7 @@
 import {
   Box,
-  Divider,
   Flex,
+  Divider,
   Spacer,
   Text,
   HStack,
@@ -21,9 +21,10 @@ const NavLink = ({ children, to = "#", onClick }) => (
     px={2}
     py={1}
     rounded="md"
+    color="#ffffff"
     _hover={{
       textDecoration: "none",
-      bg: useColorModeValue("lemonColor.100", "gray.900"),
+      bg: useColorModeValue("lemonColor.600", "gray.900"),
     }}
     onClick={onClick}
   >
@@ -40,7 +41,7 @@ function Footer() {
 
   return (
     <Box
-      bgColor={useColorModeValue("#f1f4f8", "gray.700")}
+      bgColor={useColorModeValue("bgCustom.600", "gray.700")}
       p="16px"
       as="section"
       px={10}
@@ -49,12 +50,12 @@ function Footer() {
     >
       <Flex
         direction={["column", "column", "row"]}
-        w={["100%", "100%", "1280px"]}
+        w={["100%", "100%", "100%"]}
         justifyContent="center"
         alignItems="center"
       >
         <Box>
-          <img src={Logo} alt="Hepzebahcare Logo" width="120px" />
+          <img src={Logo} alt="Hepzebahcare Logo" width="150px" />
         </Box>
         <Spacer />
         <Box>
@@ -70,6 +71,7 @@ function Footer() {
               <NavLink to="/about">About Us</NavLink>
               <NavLink to="/services">Services</NavLink>
               <NavLink to="/contact">Contact Us</NavLink>
+              <NavLink to="/privacy">Privacy Policy</NavLink>
             </HStack>
           </HStack>
         </Box>
@@ -92,9 +94,14 @@ function Footer() {
           </Flex>
         </Box>
       </Flex>
-      <Divider pt="24px" />
-      <Text textAlign="center" pt="24px" fontSize={["12px", "14px", "16px"]}>
-        All rights reserved. Hepzibah Care 2024
+      <Divider pt="24px" borderBottomColor="lemonColor.400" />
+      <Text
+        textAlign="center"
+        py="24px"
+        fontSize={["12px", "14px", "16px"]}
+        color="#ffffff"
+      >
+        © All rights reserved. Hepzibah Care 2024
       </Text>
     </Box>
   );

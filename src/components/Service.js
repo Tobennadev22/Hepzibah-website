@@ -26,11 +26,11 @@ const ServiceDescription = [
     description:
       "Providing assistance with daily living activities, and helping individuals maintain their independence at home.",
   },
-  {
-    title: "Accommodation Services (SIL, ILO, & SDA Accommodations)",
-    description:
-      "Offering safe and supportive living arrangements for those needing various levels of care.",
-  },
+  // {
+  //   title: "Accommodation Services (SIL, ILO, & SDA Accommodations)",
+  //   description:
+  //     "Offering safe and supportive living arrangements for those needing various levels of care.",
+  // },
   {
     title: "Community Access",
     description:
@@ -70,7 +70,7 @@ const referralServices = [
     title: "Community and Social Services",
     description:
       "Referrals to local community groups, support networks, recreational programs, and social activities that foster connection and inclusion.",
-    bgColor: "#ffffff",
+    bgColor: "specialColor.400",
   },
   {
     title: "Housing and Accommodation Services",
@@ -263,7 +263,7 @@ function ServiceContent({ handleServiceContent }) {
               {service.title}
             </Heading>
             <Text color="gray.500">{service.description}</Text>
-            <Divider />
+            <Divider py={2} />
           </Box>
         ))}
       </Flex>

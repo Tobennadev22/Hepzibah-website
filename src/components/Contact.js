@@ -47,7 +47,7 @@ function Contact() {
             pb={10}
             // textAlign={["center", "center", "left"]}
           >
-            We do love to hear<br></br> form you.
+            We would love to <br></br> hear from you.
           </Heading>
           <Text
             fontWeight={400}
@@ -82,7 +82,7 @@ function Contact() {
 function ContactInput() {
   return (
     <Stack direction={["column"]}>
-      <Box as="form" action="https://formspree.io/f/xvgoqbrd" method="POST">
+      <Box as="form" action="http://localhost:5000" method="POST">
         <FormControl mb={4}>
           <Input
             placeholder="Full Name"

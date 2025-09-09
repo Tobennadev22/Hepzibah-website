@@ -1,10 +1,12 @@
 import { Link as ReactRouterLink } from "react-router-dom";
+
 import { Link as ChakraLink } from "@chakra-ui/react";
 import Logo from "../assets/tobymileslogo.png";
 import "../styles/Global.css";
 import {
   Box,
   Flex,
+
   // Link,
   useDisclosure,
   Stack,
@@ -13,8 +15,10 @@ import {
   useColorModeValue,
   CloseButton,
   Button,
+  Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import AustralianFlag from "../icons/Australia.png";
 
 const NavLink = ({ children, to = "#", onClick }) => (
   <ChakraLink
@@ -25,8 +29,9 @@ const NavLink = ({ children, to = "#", onClick }) => (
     rounded="md"
     _hover={{
       textDecoration: "none",
-      bg: useColorModeValue("lemonColor.100", "gray.900"),
+      bg: useColorModeValue("lemonColor.50", "gray.900"),
     }}
+    _activeLink={{ color: "teal.500", fontWeight: "bold" }}
     onClick={onClick}
   >
     {children}
@@ -37,8 +42,9 @@ const Btn = ({ children }) => (
   <Button
     px={4}
     py={2}
-    bgColor="gray.900"
-    color="white"
+    bgColor="#f9f9f9"
+    color="gray-800"
+    border="1px solid #ccc"
     rounded="md"
     _hover={{
       textDecoration: "none",
@@ -59,7 +65,7 @@ export default function NavMenu() {
       position="sticky"
       top="0"
       zIndex="1000"
-      p={4}
+      px={8}
       boxShadow="md"
       backdropFilter="blur(10px)"
       // opacity={0.9}
@@ -74,7 +80,7 @@ export default function NavMenu() {
         />
 
         <ChakraLink as={ReactRouterLink} to="/" textDecoration="none">
-          <img src={Logo} alt="Logo" width="100px" />
+          <img src={Logo} alt="Logo" width="150px" />
         </ChakraLink>
 
         <HStack spacing={4} alignItems="center">
@@ -82,13 +88,31 @@ export default function NavMenu() {
             as="nav"
             spacing={4}
             display={{ base: "none", md: "flex" }}
-            fontWeight="600"
+            fontWeight="400"
           >
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About Us</NavLink>
-            <NavLink to="/services">Services</NavLink>
-            <NavLink to="/contact">Contact Us</NavLink>
-            <Btn>English</Btn>
+            <NavLink
+              to="/about"
+              _activeLink={{ color: "teal.500", fontWeight: "bold" }}
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              to="/services"
+              _activeLink={{ color: "teal.500", fontWeight: "bold" }}
+            >
+              Services
+            </NavLink>
+            <NavLink
+              to="/contact"
+              _activeLink={{ color: "teal.500", fontWeight: "bold" }}
+            >
+              Contact Us
+            </NavLink>
+            <HStack>
+              <img src={AustralianFlag} alt="australian-flag" width={24} />
+              <Text>En-Au</Text>
+            </HStack>
           </HStack>
         </HStack>
       </Flex>
@@ -108,7 +132,7 @@ export default function NavMenu() {
             <NavLink to="/contact" onClick={onClose}>
               Contact Us
             </NavLink>
-            <Btn>English</Btn>
+            <Btn>En-Au</Btn>
           </Stack>
         </Box>
       )}

@@ -47,6 +47,7 @@ const CustomTheme = extendTheme({
 
     bgCustom: {
       600: "#132935",
+      900: "#0a171eff",
     },
 
     bgCustomA: {
@@ -54,8 +55,8 @@ const CustomTheme = extendTheme({
     },
   },
   fonts: {
-    heading: "Lexend, sans-serif",
-    body: "Lexend, sans-serif",
+    heading: "Agrandir, open-sans",
+    body: "inter, sans-serif",
   },
 });
 

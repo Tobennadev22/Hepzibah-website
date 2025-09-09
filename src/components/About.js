@@ -5,6 +5,7 @@ import {
   Flex,
   Button,
   useColorModeValue,
+  Stack,
 } from "@chakra-ui/react";
 import myImage from "../assets/AboutImage.png";
 // import visionIcon from "../icons/healthcare2.png";
@@ -13,6 +14,7 @@ import myImage from "../assets/AboutImage.png";
 
 import { Link as ReactRouterLink } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
+import ExploreSection from "./ExploreSection";
 
 const NavLink = ({ children, to = "#", onClick }) => (
   <ChakraLink as={ReactRouterLink} to={to} onClick={onClick}>
@@ -76,15 +78,14 @@ function HeaderContent() {
             pb="32px"
           >
             Hepzibah Care is a not-for-profit organisation dedicated to
-            delivering Holistic Person-Centred services rooted in a
+            delivering a Holistic Person-Centred service rooted in a
             Biopsychosocial model of care. Operating under the Disability
             Services and Inclusion Act 2023, Our service providers passionately
-            advocate for clients’ holistic needs ensuring they are given equal
-            opportunities and access to services and resources necessary to
-            reach their full potential; as we firmly believe that individuals
-            with disabilities have the right and capabilities to be active
-            participants in society, develop autonomy and live fulfilling lives
-            with dignity and independence
+            advocate for clients’ needs ensuring they are given equal
+            opportunity and access to services and resources necessary to reach
+            their full potential. We firmly believe that our clients group have
+            the right to actively participate in society, develop autonomy and
+            live fulfilling lives with dignity.
           </Text>
 
           <Box my="32px">
@@ -159,19 +160,17 @@ function CardDescription() {
         >
           {/* <img src={visionIcon} width={["64px"]} alt="visionIcon" /> */}
           <Text fontSize="24px" fontWeight={400} py="12px">
-            Our Vision
+            Vision Statement
           </Text>
           <Text fontWeight={300}>
-            Hepzibah Care is a not-for-profit organisation committed to
-            implementing a person-centred approach, by way of, advocacy to
-            participants and their caregivers empowering them to achieve their
-            full potential. We are devoted to supporting service users while
-            assisting them to participate successfully and confidently as they
-            integrate within the community.
+            To create a world where every person with a disability is empowered
+            to live with dignity, independence, and full inclusion, supported by
+            compassionate services, innovative solutions, and a community that
+            celebrates diversity.
           </Text>
         </Box>
         <Box
-          bgColor="specialColor.400"
+          bgColor="gray.50"
           w={["100%", "100%", "407px"]}
           h="473px"
           p={4}
@@ -184,17 +183,17 @@ function CardDescription() {
             <img src={missionIcon} width={["64px"]} alt="missionIcon" />
           </Box> */}
           <Text fontSize="24px" fontWeight={400} py="12px">
-            Our Mission
+            Mission Statement
           </Text>
           <Text fontWeight={300}>
-            To provide unique and friendly support to persons living with
-            disability and their families, and inspire our service users to
-            delight in themselves by finding a sense of purpose and identity in
-            society
+            Our mission is to provide person-centred disability services that
+            promote autonomy, inclusion, and well-being. We strive to break down
+            barriers, advocate for rights, and deliver innovative support that
+            empowers individuals to thrive in all aspects of life
           </Text>
         </Box>
         <Box
-          bgColor="gray.50"
+          bgColor="specialColor.400"
           w={["100%", "100%", "407px"]}
           h="473px"
           p={4}
@@ -204,16 +203,15 @@ function CardDescription() {
         >
           {/* <img src={approachIcon} width={["64px"]} alt="approchicon" /> */}
           <Text fontSize="24px" fontWeight={400} py="12px">
-            Our Approach
+            Our Approach to Care
           </Text>
           <Text fontWeight={300}>
-            At Hepzibah Care, our approach is rooted in the Biopsychosocial
-            model of care, ensuring that we address the physical, psychological,
-            and social needs of every client. This holistic framework allows us
-            to create customized care plans that promote well-being across all
-            aspects of life. We believe in building strong, collaborative
-            relationships with our clients, their caregivers and stakeholders to
-            deliver the best outcomes.
+            At Hepzibah Care, we embrace the Biopsychosocial model to deliver
+            holistic, person-centred support. By addressing physical,
+            psychological, and social needs, we co-create tailored care plans
+            that foster well-being and independence. Through strong partnerships
+            with clients, caregivers, and stakeholders, we ensure collaborative,
+            outcome-driven care.
           </Text>
         </Box>
       </Flex>
@@ -238,10 +236,25 @@ function CoreValue() {
         >
           Our Core Values
         </Text>
-        <Text fontSize={["14px", "16px", "18px"]} mb={["32px", "48px", "80px"]}>
-          Our core values reflect our commitment to providing compassionate,
-          high-quality support services:
-        </Text>
+        <Stack>
+          <Text
+            fontSize={["14px", "16px", "18px"]}
+            // mb={["32px", "48px", "80px"]}
+          >
+            Our Core values reflect our commitment to supporting our clients
+            with empathy, integrity, and delivering person-centred care. Our
+            mission is to create safe, inclusive environments where every person
+            feels respected, empowered, and connected.
+          </Text>
+          <Text
+            fontSize={["14px", "16px", "18px"]}
+            mb={["32px", "48px", "80px"]}
+          >
+            Whether you're seeking support for yourself or a loved one, we are
+            here to build meaningful relationships that foster wellbeing,
+            resilience, and a true sense of belonging.
+          </Text>
+        </Stack>
       </Box>
       <Flex direction={["column", "column", "row"]} mb={5}>
         <Box
@@ -338,7 +351,7 @@ function CoreValue() {
           </Text>
         </Box>
         <Box
-          bgColor="#ffffff"
+          bgColor="specialColor.400"
           width={["100%", "100%", "630px"]}
           height={"100%"}
           p={6}
@@ -372,7 +385,7 @@ function CoreValue() {
 
       <Flex direction={["column", "column", "row"]} mb={5}>
         <Box
-          bgColor="#ffffff"
+          bgColor="specialColor.400"
           width={["100%", "100%", "630px"]}
           height={"100%"}
           p={6}
@@ -435,7 +448,7 @@ function CoreValue() {
       {/*Fourth Role of content */}
 
       <Flex direction={["column", "column", "row"]} mb={5}>
-        <Box
+        {/* <Box
           bgColor="#ffffff"
           width={["100%", "100%", "630px"]}
           height={"100%"}
@@ -451,8 +464,8 @@ function CoreValue() {
             boxShadow: "lg",
           }}
           style={{ perspective: "1000px" }}
-        >
-          <Text
+        > */}
+        {/* <Text
             fontSize={["18px", "18px", "24px"]}
             fontWeight={[400]}
             pb={["8px"]}
@@ -462,8 +475,8 @@ function CoreValue() {
           <Text fontSize={["14px", "16px", "16px"]} fontWeight={400}>
             We encourage individuals to take control of their lives, supporting
             them to make informed decisions and achieve personal growth.
-          </Text>
-        </Box>
+          </Text> */}
+        {/* </Box> */}
         <Box
           // bgColor="#ffffff"
           width={["100%", "100%", "630px"]}
@@ -481,6 +494,7 @@ function CoreValue() {
     </Text> */}
         </Box>
       </Flex>
+      <ExploreSection />
     </Box>
   );
 }
