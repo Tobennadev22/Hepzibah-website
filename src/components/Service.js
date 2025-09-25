@@ -309,6 +309,7 @@ function ReferralContent() {
       p={[2, 8, 16]}
       borderRadius="20px"
       pb={["32px", "48px", "64px"]}
+      pt={["32px", "48px", "64px"]}
     >
       <Box w={["100%", "100%", 800]} textAlign="center" mx="auto">
         <Heading
