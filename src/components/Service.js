@@ -7,11 +7,17 @@ import {
   Button,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { keyframes } from "@emotion/react";
 import myImage from "../assets/holdinghands.png";
+import myImg from "../assets/Hepzibah-img-2.jpg";
 import transportSection from "../assets/Transportservice.png";
+import Circular from "./Circular";
 
 import { Link as ReactRouterLink } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const NavLink = ({ children, to = "#", onClick }) => (
   <ChakraLink as={ReactRouterLink} to={to} onClick={onClick}>
@@ -124,6 +130,14 @@ const transportServices = [
 ];
 
 function Service() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration
+      offset: 200, // Trigger animation when 200px in viewport
+      easing: "ease-in-out",
+      once: false, // Animation occurs only once
+    });
+  }, []);
   return (
     <Box>
       <HeaderContent />
@@ -137,7 +151,7 @@ function Service() {
 function HeaderContent() {
   return (
     <Box
-      mb={["16px", "16px", "28px"]}
+      // mb={["16px", "16px", "28px"]}
       as="section"
       px={[2, 5, 10]}
       pt="48px"
@@ -148,6 +162,7 @@ function HeaderContent() {
         direction={["column", "column", "row"]}
         spacing="20px"
         px={[2, 5, 10]}
+        data-aos="fade-up" // AOS animation
       >
         <Box
           h={[280, 500, 600]}
@@ -250,7 +265,13 @@ function ImageSection() {
 // Updated ServiceContent component
 function ServiceContent({ handleServiceContent }) {
   return (
-    <Box px={["40px", "48px", "120px"]} pt={["14px", "18px", "80px"]} pb="80px">
+    <Box
+      px={["40px", "48px", "120px"]}
+      py={["14px", "18px", "80px"]}
+      // pb="80px"
+      bgColor="bgCustom.600"
+      color="#ffffff"
+    >
       <Flex wrap="wrap" spacing="32px" align="center">
         {handleServiceContent.map((service, index) => (
           <Box
@@ -258,6 +279,14 @@ function ServiceContent({ handleServiceContent }) {
             width={["100%", "100%", "347px"]}
             marginRight={index % 3 === 2 ? 0 : ["0px", "0px", "80px"]}
             mb={["32px", "32px", "48px"]}
+            transition="all 0.9s ease-in-out"
+            _hover={{
+              // bgImage: `url(${myImg})`,
+              padding: "10px",
+              color: "#ffffff",
+              transition: "all 0.4s ease-in-out",
+            }}
+            data-aos="fade-right"
           >
             <Heading fontSize="18px" fontWeight="semiBold" pb="14px">
               {service.title}
@@ -267,6 +296,7 @@ function ServiceContent({ handleServiceContent }) {
           </Box>
         ))}
       </Flex>
+      <Circular />
     </Box>
   );
 }
@@ -309,6 +339,10 @@ function ReferralContent() {
               p={4}
               mb="10px"
               mx={["0px", "0px", "10px"]}
+              _hover={{
+                transform: " scale(1.08)",
+                transition: "transform 0.6s ease",
+              }}
             >
               <Text fontSize="18px" fontWeight="semiBold" py="12px">
                 {service.title}
@@ -376,6 +410,10 @@ function TransportService() {
                   p={4}
                   mb="10px"
                   mx={["0px", "0px", "10px"]}
+                  _hover={{
+                    transform: " scale(1.05)",
+                    transition: "transform 0.6s ease",
+                  }}
                 >
                   <Text fontSize="18px" fontWeight="semiBold" pb="5px">
                     {service.title}
@@ -392,167 +430,5 @@ function TransportService() {
     </Box>
   );
 }
-
-// function TransportService() {
-//   return (
-//     <Box
-//       mb={["16px", "16px", "28px"]}
-//       as="section"
-//       px={[2, 5, "140px"]}
-//       pt={["40px", "80px", "80px"]}
-//       pb={["240px"]}
-//       w={["100%"]}
-//       h={["100%", "100%", 1000]}
-//     >
-//       <Flex direction={["column", "column", "row"]}>
-//         <Box
-//           h={[300, 400, 600]}
-//           pt={["32px", "32px", "54px"]}
-//           px={["16px", "16px"]}
-//           w={["100%", "100%", 800]}
-//           display={["block", "none", "block"]}
-//           // bg="brandblue.200"
-
-//           // borderRadius={20}
-//           backgroundImage={`url(${transportSection})`}
-//           backgroundSize="cover"
-//           backgroundPosition="center"
-//           backgroundRepeat="no-repeat"
-//           marginRight={20}
-//         ></Box>
-//         <Box>
-//           <Box w={["100%", "100%", 800]} mb="50px">
-//             <Heading fontSize={["24px"]} pb="18px">
-//               Transport Services
-//             </Heading>
-//             <Text fontSize={["16px"]}>
-//               Reliable and accessible transport is a critical part of
-//               maintaining independence and ensuring clients stay connected to
-//               essential services and their community. Our transport services
-//               provide safe and dependable transportation options for a variety
-//               of needs, including as:
-//             </Text>
-//           </Box>
-//           <Box>
-//             <Flex direction={["column", "column", "row"]} mb="32px">
-//               <Box
-//                 bgColor="#F1F6F8"
-//                 width={["100%", "100%", "350px"]}
-//                 height="189px"
-//                 marginRight={["0px", "0px", "12px"]}
-//                 // mb={["10px", "0px", "0px"]}
-//                 borderRadius={10}
-//                 p={4}
-//                 py={["20px"]}
-//                 // boxShadow="2xl"
-//               >
-//                 <Text fontSize="18px" fontWeight="Bold" pb="5px">
-//                   Medical Appointments
-//                 </Text>
-//                 <Text fontSize="14px" color="gray.700" fontWeight={400}>
-//                   We arrange transport to and from healthcare appointments,
-//                   ensuring clients can access necessary medical care, whether
-//                   it’s for routine check-ups, specialist consultations, or
-//                   ongoing treatments.
-//                 </Text>
-//               </Box>
-//               <Box
-//                 // bgColor="#ffffff"
-//                 width={["100%", "100%", "350px"]}
-//                 height="189px"
-//                 borderRadius={10}
-//                 p={4}
-//                 py={["20px"]}
-//                 // boxShadow="2xl"
-//               >
-//                 <Text fontSize="18px" fontWeight="Bold" pb="5px">
-//                   Community and Social Engagement
-//                 </Text>
-//                 <Text fontSize="14px" color="gray.700" fontWeight={400}>
-//                   We believe in the importance of staying active and involved in
-//                   the community. Our transport service ensures that clients can
-//                   attend social events, recreational activities, educational
-//                   programs, and community gatherings, fostering social inclusion
-//                   and well-being.
-//                 </Text>
-//               </Box>
-//             </Flex>
-
-//             <Flex direction={["column", "column", "row"]} mb="32px">
-//               <Box
-//                 // bgColor="#F1F6F8"
-//                 width={["100%", "100%", "350px"]}
-//                 height="189px"
-//                 marginRight={["0px", "0px", "10px"]}
-//                 mb={["10px", "0px", "0px"]}
-//                 borderRadius={10}
-//                 p={4}
-//                 // boxShadow="2xl"
-//               >
-//                 <Text fontSize="18px" fontWeight="Bold" pb="5px">
-//                   Personal Errands
-//                 </Text>
-//                 <Text fontSize="14px" color="gray.700" fontWeight={400}>
-//                   We offer support with transportation for everyday errands such
-//                   as grocery shopping, visiting family or friends, and attending
-//                   personal appointments, helping clients maintain their
-//                   independence and quality of life.
-//                 </Text>
-//               </Box>
-//               <Box
-//                 bgColor="#F1F6F8"
-//                 width={["100%", "100%", "350px"]}
-//                 height="189px"
-//                 borderRadius={10}
-//                 p={4}
-//                 // boxShadow="2xl"
-//               >
-//                 <Text fontSize="18px" fontWeight="Bold" pb="5px">
-//                   Rehabilitation and Therapy Sessions
-//                 </Text>
-//                 <Text fontSize="14px" color="gray.700" fontWeight={400}>
-//                   Regular attendance at rehabilitation and therapy sessions is
-//                   key to recovery and improvement. Our transport services help
-//                   clients reach these appointments without the stress of
-//                   managing their own travel.
-//                 </Text>
-//               </Box>
-//             </Flex>
-
-//             <Flex direction={["column", "column", "row"]}>
-//               <Box
-//                 bgColor="#F1F6F8"
-//                 width={["100%", "100%", "350px"]}
-//                 height="189px"
-//                 marginRight={["0px", "0px", "10px"]}
-//                 mb={["10px", "0px", "0px"]}
-//                 borderRadius={10}
-//                 p={4}
-//                 // boxShadow="2xl"
-//               >
-//                 <Text fontSize="18px" fontWeight="Bold" pb="5px">
-//                   Special Events and Activities
-//                 </Text>
-//                 <Text fontSize="14px" color="gray.700" fontWeight={400}>
-//                   For clients who wish to participate in cultural, religious, or
-//                   special events, we ensure they have the transportation they
-//                   need to stay connected to their passions and culture.
-//                 </Text>
-//               </Box>
-//               <Box
-//                 // bgColor="#F1F6F8"
-//                 width={["100%", "100%", "350px"]}
-//                 height="189px"
-//                 borderRadius={10}
-//                 p={4}
-//                 // boxShadow="2xl"
-//               ></Box>
-//             </Flex>
-//           </Box>
-//         </Box>
-//       </Flex>
-//     </Box>
-//   );
-// }
 
 export default Service;

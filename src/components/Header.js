@@ -40,9 +40,8 @@ function Header() {
       px={[2, 5, 10]}
       pt="48px"
       pb={["10px", "40px", "140px"]}
-      background="bgCustom.900"
+      background="bgCustom.600"
       py={["60px"]}
-      data-aos="fade-up" // AOS animation
     >
       <Container maxW={["Container: xl"]}>
         <Flex
@@ -51,6 +50,7 @@ function Header() {
           gap="120px"
           alignItems="center"
           justifyContent="center"
+          data-aos="fade-up" // AOS animation
         >
           {/* Main content box with background image */}
           <Box

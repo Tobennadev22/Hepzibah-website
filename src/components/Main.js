@@ -127,6 +127,10 @@ function Content({ scaleX }) {
             pb={["10px", "0px", "0px"]}
             mb={["10px", "0px", "0px"]}
             boxShadow="xl"
+              _hover={{
+              transform: " scale(1.05)",
+              transition: "transform 0.6s ease",
+            }}
           >
             <img src={Holistic} alt="HolisticIcon" width="32px" />
             <Text fontSize="18px" fontWeight="semiBold" py="12px">
@@ -172,6 +176,10 @@ function Content({ scaleX }) {
             borderRadius={10}
             p={4}
             boxShadow="2xl"
+              _hover={{
+              transform: " scale(1.05)",
+              transition: "transform 0.6s ease",
+            }}
           >
             <img src={Client} alt="ClientIcon" width="32px" />
             <Text fontSize="18px" fontWeight="semiBold" py="12px">
@@ -190,6 +198,10 @@ function Content({ scaleX }) {
             borderRadius={10}
             p={4}
             boxShadow="2xl"
+              _hover={{
+              transform: " scale(1.05)",
+              transition: "transform 0.6s ease",
+            }}
           >
             <img src={Communinity} alt="CommunitycareIcon" width="32px" />
             <Text fontSize="18px" fontWeight="semiBold" py="12px">

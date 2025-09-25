@@ -23,6 +23,8 @@ function ExploreSection() {
       alignItems="center"
       justifyContent="center"
       borderRadius={8}
+      mb={["80px"]}
+      zIndex={[1000]}
     >
       <Text
         fontSize={["24px", "24px", "32px"]}

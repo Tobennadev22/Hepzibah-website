@@ -7,7 +7,10 @@ import {
   useColorModeValue,
   Stack,
 } from "@chakra-ui/react";
-import myImage from "../assets/AboutImage.png";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
+import myImage from "../assets/Hepzibah-img-2.jpg";
 // import visionIcon from "../icons/healthcare2.png";
 // import missionIcon from "../icons/care.png";
 // import approachIcon from "../icons/emotional-health.png";
@@ -24,11 +27,18 @@ const NavLink = ({ children, to = "#", onClick }) => (
 
 // Main Header component
 function About() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Animation duration
+      easing: "ease-in",
+      once: false, // Animation occurs only once
+    });
+  }, []);
   return (
     <Box as="section">
       <HeaderContent />
-      <CardDescription />
-      <CoreValue />
+      <CardDescription data-aos="fade-up" />
+      <CoreValue data-aos="fade-up" />
     </Box>
   );
 }
@@ -52,6 +62,7 @@ function HeaderContent() {
         // backgroundImage={`url(${myImage})`}
         mx="auto"
         marginRight={["0px", "0px", "20px"]}
+        data-aos="fade-up"
       >
         <Box
           textAlign={["center", "center", "left"]}
@@ -132,6 +143,7 @@ function ImageSection() {
       backgroundSize="cover"
       backgroundPosition="center"
       backgroundRepeat="no-repeat"
+      data-aos="fade-up"
       // className="ekit-fancy-text-animated"
     >
       {/* Additional content can be added here */}
@@ -141,7 +153,12 @@ function ImageSection() {
 
 function CardDescription() {
   return (
-    <Box mt="80px" px={[2, 5, 10]} pb={["32px", "48px", "80px"]}>
+    <Box
+      py="80px"
+      px={[2, 5, 10]}
+      pb={["32px", "48px", "80px"]}
+      bgColor="bgCustom.600"
+    >
       <Flex
         direction={["column", "column", "row"]}
         spacing={4}
@@ -149,14 +166,16 @@ function CardDescription() {
         align="center"
       >
         <Box
-          bgColor="specialColor.400"
+          bgColor="lemonColor.700"
+          color="#ffffff"
           w={["100%", "100%", "407px"]}
-          h={["100%", "100%", "473px"]}
+          h={["100%", "100%", "350px"]}
           p={4}
           textAlign={["center"]}
           borderRadius={10}
           marginRight={[0, 0, 5]}
           mb={["24px", "0px", "0px"]}
+          data-aos="fade-right"
         >
           {/* <img src={visionIcon} width={["64px"]} alt="visionIcon" /> */}
           <Text fontSize="24px" fontWeight={400} py="12px">
@@ -172,12 +191,13 @@ function CardDescription() {
         <Box
           bgColor="gray.50"
           w={["100%", "100%", "407px"]}
-          h="473px"
+          h="350px"
           p={4}
           textAlign={["center"]}
           borderRadius={10}
           marginRight={[0, 0, 5]}
           mb={["24px", "0px", "0px"]}
+          data-aos="fade-up"
         >
           {/* <Box mx="auto">
             <img src={missionIcon} width={["64px"]} alt="missionIcon" />
@@ -193,13 +213,15 @@ function CardDescription() {
           </Text>
         </Box>
         <Box
-          bgColor="specialColor.400"
+          bgColor="lemonColor.700"
+          color="#ffffff"
           w={["100%", "100%", "407px"]}
-          h="473px"
+          h="350px"
           p={4}
           textAlign={["center"]}
           borderRadius={10}
           mb={["24px", "0px", "0px"]}
+          data-aos="fade-left"
         >
           {/* <img src={approachIcon} width={["64px"]} alt="approchicon" /> */}
           <Text fontSize="24px" fontWeight={400} py="12px">
@@ -228,7 +250,7 @@ function CoreValue() {
       py={4}
       textAlign={["center", "left", "left"]}
     >
-      <Box>
+      <Box data-aos="fade-up">
         <Text
           fontSize={["24px", "24px", "48px"]}
           fontWeight={["bold", "semibold", "light"]}
@@ -274,6 +296,7 @@ function CoreValue() {
             boxShadow: "lg",
           }}
           style={{ perspective: "1000px" }}
+          data-aos="fade-left"
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
@@ -302,6 +325,7 @@ function CoreValue() {
             boxShadow: "lg",
           }}
           style={{ perspective: "1000px" }}
+          data-aos="fade-right"
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
@@ -337,6 +361,7 @@ function CoreValue() {
             boxShadow: "lg",
           }}
           style={{ perspective: "1000px" }}
+          data-aos="fade-left"
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
@@ -365,6 +390,7 @@ function CoreValue() {
             boxShadow: "lg",
           }}
           style={{ perspective: "1000px" }}
+          data-aos="fade-right"
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
@@ -401,6 +427,7 @@ function CoreValue() {
             boxShadow: "lg",
           }}
           style={{ perspective: "1000px" }}
+          data-aos="fade-left"
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
@@ -429,6 +456,7 @@ function CoreValue() {
             boxShadow: "lg",
           }}
           style={{ perspective: "1000px" }}
+          data-aos="fade-right"
         >
           <Text
             fontSize={["18px", "18px", "24px"]}
