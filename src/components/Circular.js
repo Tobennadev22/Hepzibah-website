@@ -20,7 +20,7 @@ const Circular = () => {
       top="-180px"
       w="300px"
       h="300px"
-      display="flex"
+      display={["none", "flex", "flex"]}
       alignItems="center"
       justifyContent="center"
     >
